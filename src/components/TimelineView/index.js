@@ -1,12 +1,12 @@
 // Write your code here
-import {Chrono} from 'react-chrono'
+import {Chrono} from 'react-chrno'
 
 import ProjectTimelineCard from '../ProjectTimelineCard'
 import CourseTimelineCard from '../CourseTimelineCard'
 
 import {
-  TimelineContainer,
-  ResponsiveContainer,
+    TimelineContainer, 
+    ResponsiveContainer,
   HeaderContainer,
   Heading,
   CCBPHeading,
