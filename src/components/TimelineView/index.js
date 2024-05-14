@@ -1,16 +1,8 @@
 // Write your code here
-import {Chrono} from 'react-chrno'
+import {Chrono} from 'react-chrono'
 
 import ProjectTimelineCard from '../ProjectTimelineCard'
 import CourseTimelineCard from '../CourseTimelineCard'
-
-import {
-    TimelineContainer, 
-    ResponsiveContainer,
-  HeaderContainer,
-  Heading,
-  CCBPHeading,
-} from 'react'
 
 const TimelineView = props => {
   const {timelineItemsList} = props
@@ -23,25 +15,21 @@ const TimelineView = props => {
   }
 
   return (
-    <TimelineContainer>
-      <ResponsiveContainer>
-        <HeaderContainer>
-          <Heading>
-            MY JOURNEY OF <br />
-            <CCBPHeading>CCBP 4.0</CCBPHeading>
-          </Heading>
-        </HeaderContainer>
-        <Chrono
-          theme={{
-            secondary: 'white',
-          }}
-          items={timelineItemsList}
-          mode="VERTICAL_ALTERNATING"
-        >
-          {timelineItemsList.map(eachItem => renderTimelineCard(eachItem))}
-        </Chrono>
-      </ResponsiveContainer>
-    </TimelineContainer>
+    <div>
+      <h1>
+        MY JOURNEY OF <br />
+        <span>CCBP 4.0</span>
+      </h1>
+      <Chrono
+        theme={{
+          secondary: 'white',
+        }}
+        items={timelineItemsList}
+        mode="VERTICAL_ALTERNATING"
+      >
+        {timelineItemsList.map(eachItem => renderTimelineCard(eachItem))}
+      </Chrono>
+    </div>
   )
 }
 export default TimelineView
