@@ -1,17 +1,6 @@
 // Write your code here
 import {AiFillCalendar} from 'react-icons/ai'
 
-import {
-  ProjectCardContainer,
-  ProjectImage,
-  ProjectTitleAndDurationContainer,
-  ProjectTitle,
-  DurationContainer,
-  Duration,
-  ProjectDescription,
-  VisitLink,
-} from 'react'
-
 const ProjectTimeLineCard = props => {
   const {projectDetails} = props
   const {
@@ -23,18 +12,18 @@ const ProjectTimeLineCard = props => {
   } = projectDetails
 
   return (
-    <ProjectCardContainer>
-      <ProjectImage src={imageUrl} alt="project" />
-      <ProjectTitleAndDurationContainer>
-        <ProjectTitle>{projectTitle}</ProjectTitle>
-        <DurationContainer>
+    <div>
+      <img src={imageUrl} alt="project" />
+      <div>
+        <h1>{projectTitle}</h1>
+        <div>
           <AiFillCalendar color="#171f46" />
-          <Duration>{duration}</Duration>
-        </DurationContainer>
-      </ProjectTitleAndDurationContainer>
-      <ProjectDescription>{description}</ProjectDescription>
-      <VisitLink href={projectUrl}>Visit</VisitLink>
-    </ProjectCardContainer>
+          <p>{duration}</p>
+        </div>
+      </div>
+      <p>{description}</p>
+      <a href={projectUrl}>Visit</a>
+    </div>
   )
 }
 export default ProjectTimeLineCard
